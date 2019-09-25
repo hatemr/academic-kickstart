@@ -67,4 +67,4 @@ user_groups:
 - Visitors
 ---
 
-I am a master's student in Fin. Mathematics at the Univeristy of Chicago. I am interested in machine learning and natural language processing.
+I am a master's student in Fin. Mathematics at the University of Chicago. I am interested in machine learning and natural language processing.
