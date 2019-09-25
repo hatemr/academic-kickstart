@@ -70,3 +70,7 @@ user_groups:
 I am a master's student in Fin. Mathematics at the University of Chicago. I am interested in machine learning and natural language processing.
 
 See my other site https://hatemr.github.io while I migrate websites.
+
+Github: https://github.com/hatemr
+LinkedIn: https://www.linkedin.com/in/robert-e-hatem/
+Email: rhatem@uchicago.edu
