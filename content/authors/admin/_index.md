@@ -68,3 +68,5 @@ user_groups:
 ---
 
 I am a master's student in Fin. Mathematics at the University of Chicago. I am interested in machine learning and natural language processing.
+
+See my other site https://hatemr.github.io while I migrate websites.
