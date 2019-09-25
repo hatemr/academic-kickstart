@@ -11,6 +11,8 @@
 #   Browse user installed themes in `data/themes/`
 theme = "minimal"
 
+#color_theme = "minimal" # I think it's theme, not color_theme
+
 # Enable users to switch between day and night mode?
 day_night = true
 
