@@ -15,6 +15,6 @@ autolink = true
 #   0: Disable email form
 #   1: Netlify (requires that the site is hosted by Netlify)
 #   2: formspree.io
-email_form = 2
+email_form = 0 #0=email address as link, 1=contact form with a captcha, 2=form full?
 +++
 
