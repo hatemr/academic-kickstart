@@ -9,8 +9,6 @@ summary = "Refresher on the basics of linear regression"
 #disable_comments: true
 +++
 
-#![image](/img/image_test.png).
-
 This introduces linear regression from an elementary point of view. Returning to the theoretical foundations helps since linear regression serves as a building block for more advanced techniques.
 
 This tutorial relies heavily on Cosma Shalizi's lectures on modern regression[^1], which are insightful, witty, and a delight to read. This tutorial is taken from his lectures and I recommend anyone who is curious to check them out. 
@@ -91,14 +89,12 @@ It is usually a vast generalization to say that $\mathbb{E}[Y \| X=x]$ is a line
 Now the regression function $\mu(x)$ is defined by the coefficients $\beta_0$ and $\beta_1$. We will adjust the coefficients to find the function $\mu(x)$ which minimizes the $MSE$, which is a function of the coefficients:
 
 $$
-\[
 \begin{aligned}[t]
   MSE(\beta_0, \beta_1) &= \mathbb{E}\left[\left(Y - \left(\beta_0 + \beta_1X \right)\right)^2\right] \\
    						&= \mathbb{E}[Y^2] - 2\beta_0\mathbb{E}[Y] - 2\beta_1\mathbb{E}[XY] + \mathbb{E}\left[\left(\beta_0+\beta_1X\right)^2 \right] \\
    						&= \mathbb{E}[Y^2] - 2\beta_0\mathbb{E}[Y] - 2\beta_1\left(Cov[X,Y] + \mathbb{E}[X]\mathbb{E}[Y]\right) + \beta_0^2 + 2\beta_1\mathbb{E}[X] + \beta_1^2\mathbb{E}[X^2] \\
    						&= \mathbb{E}[Y^2] - 2\beta_0\mathbb{E}[Y] - 2\beta_1(Cov[X,Y] + 2\beta_1\mathbb{E}[X]\mathbb{E}[Y] + \beta_0^2 + 2\beta_0\beta_1\mathbb{E}[X] + \beta_1^2Var[X] + \beta_1^2(\mathbb{E}[X])^2
 \end{aligned}
-\]
 $$
 
 As before, we find the values of $\beta_0$ and $\beta_1$ which minimize the $MSE(\beta_0, \beta_1)$ by setting the derivatives equal to zero and solving for the betas:
