@@ -21,3 +21,5 @@ Test an image:
 ![image](/images/test_image.png).
 Or try:
 ![image](image_test.png).
+Or try:
+![image](/img/image_test.png).
