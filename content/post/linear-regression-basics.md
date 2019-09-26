@@ -9,7 +9,7 @@ summary = "Refresher on the basics of linear regression"
 #disable_comments: true
 +++
 
-This introduces linear regression from an elementary point of view. Returning to the theoretical foundations helps since linear regression serves as a building block for more advanced techniques.
+This article introduces linear regression from an elementary point of view. Returning to the theoretical foundations helps since linear regression serves as a building block for more advanced techniques.
 
 This tutorial relies heavily on Cosma Shalizi's lectures on modern regression[^1], which are insightful, witty, and a delight to read. This tutorial is taken from his lectures and I recommend anyone who is curious to check them out. 
 
