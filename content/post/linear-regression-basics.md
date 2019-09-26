@@ -4,9 +4,9 @@ date = 2018-03-03T13:23:10+01:00
 draft = false
 tags = ["Getting started"]
 categories = []
-markup: mmark
-summary: "Refresher on the basics of linear regression"
-disable_comments: true
+#markup: mmark
+summary = "Refresher on the basics of linear regression"
+#disable_comments: true
 +++
 
 
