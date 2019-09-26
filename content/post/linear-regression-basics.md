@@ -18,4 +18,6 @@ This is an inline test $e=mc^2$ done.
 This is an inline test  $$ e=mc^2$$ done.
 
 Test an image:
-![image](/images/test_image.png)
+![image](/images/test_image.png).
+Or try:
+![image](image_test.png).
