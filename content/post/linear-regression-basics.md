@@ -111,7 +111,7 @@ $$\beta_1 = \frac{Cov(X,Y)}{Var(X)}$$
 
 Note that if $X$ and $Y$ are centered, that is they have mean zero, then the intercept $\beta_0$ is zero and line goes through the origin. For $\beta_1$, the more that $X$ and $Y$ vary together (tend to move when the other one moves), the steeper the line. As the variance of $X$ increases, $\beta_1$ goes to zero, regardless of its covariance with $Y$.
 
-The result is the line $\beta_0 + \beta_1x$ is the **optimal regression line** or the **optimal linear predictor**. This line, defined by $\beta_0 and \beta_1$ is the **best** line we can choose that approximates the true regression function, according to the $MSE$.
+The result is the line $\beta_0 + \beta_1x$ is the **optimal regression line** or the **optimal linear predictor**. This line, defined by $\beta_0$ and $\beta_1$ is the **best** line we can choose that approximates the true regression function, according to the $MSE$.
 
 ###  Take-aways
 1. We did not assume that the relationship between $X$ and $Y$ is actually linear. What we did was derive the optimal linear approximation to the true relationship, whatever that relationship might be (e.g. $\mu(x)=e^x$ or $\sin x$). This approximation is not necessarily a good one, and it may well be an awful one.
@@ -146,7 +146,7 @@ All of these assumptions will need to be checked if the model is to be used. It 
 ### Note on p-values
 With the added assumption that $\epsilon$ follows a normal distribution, we can derive the sampling distributions of the coefficients. They come out to be Gaussian and we can easily measure their p-value to test the null hypothesis that the coefficients are 0. This step is out-of-scope for this tutorial but it's worth mentioning here.
 
-P-values on the coefficients are tricky to interpret and many people have trouble with them. The term **statistical significance** has a specific definition and is not the same, nor does it imply, scientific or practical significance. Shalizi masterfully articulates the point:
+P-values on the coefficients are tricky to interpret and many people have trouble with them. The term **statistical significance** has a specific definition and is not the same, nor does it imply, scientific or practical significance. Shalizi says it best:
 
 > Statistical significance is a weird mixture of how big the coefficient is, how big a sample we've got, how much noise there is around the regression line, and how spread out the data is along the $x$ axis. This has so little to do with "significance" in ordinary language that it's pretty unfortunate we're stuck with the word; if the Ancestors had decided to say "statistically detectable" or "statistically distinguishable from 0", we might have avoided a lot of confusion.[^3]
 
@@ -154,7 +154,7 @@ When we reject the hypothesis that $\beta_1=0$, what we're saying is "It's reall
 
 ## Summary
 
-In conclusion, this tutorial showed that the optimal regression line of $Y$ on $X$ is defined by the coefficients $\beta_0$ and $\beta_1$ that we derived. These coefficients made no assumptions on the distributions of $X$ and $Y$, nor did we assume that the true relationship between $X$ and $Y$ is linear -- we only used the linear function as an approximation to the true relationship. The next steps would be to formalize the simple linear model by adding an error term, estimate the coefficeints from data and derive their distributions, expecations, and variances, assume that the error terms is normally distibuted, and show this assumption implies the least squares estimate gives the same result as the maximum likelihood estimate. If you want to find more information, or just want a good read on linear regression, I recommend continuing with Shalizi's [lectures](http://www.stat.cmu.edu/~cshalizi/mreg/15/). Thanks for tuning in.
+In conclusion, this tutorial showed that the optimal regression line of $Y$ on $X$ is defined by the coefficients $\beta_0$ and $\beta_1$ that we derived. These coefficients made no assumptions on the distributions of $X$ and $Y$, nor did we assume that the true relationship between $X$ and $Y$ is linear -- we only used the linear function as an approximation to the true relationship. The next steps would be to formalize the simple linear model by adding an error term, estimate the coefficeints from data and derive their distributions, expecations, and variances, assume that the error terms is normally distibuted, and show this assumption implies the least squares estimate gives the same result as the maximum likelihood estimate. If you want to find more information, or just want a good read on linear regression, I recommend continuing with Shalizi's [lectures](http://www.stat.cmu.edu/~cshalizi/mreg/15/). Thanks for reading.
 
 
 ### References:
