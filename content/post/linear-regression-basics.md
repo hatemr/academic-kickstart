@@ -91,12 +91,14 @@ It is usually a vast generalization to say that $\mathbb{E}[Y \| X=x]$ is a line
 Now the regression function $\mu(x)$ is defined by the coefficients $\beta_0$ and $\beta_1$. We will adjust the coefficients to find the function $\mu(x)$ which minimizes the $MSE$, which is a function of the coefficients:
 
 $$
-\begin{align}
+\begin{equation*}
+\begin{aligned}
   MSE(\beta_0, \beta_1) &= \mathbb{E}\left[\left(Y - \left(\beta_0 + \beta_1X \right)\right)^2\right] \\
    						&= \mathbb{E}[Y^2] - 2\beta_0\mathbb{E}[Y] - 2\beta_1\mathbb{E}[XY] + \mathbb{E}\left[\left(\beta_0+\beta_1X\right)^2 \right] \\
    						&= \mathbb{E}[Y^2] - 2\beta_0\mathbb{E}[Y] - 2\beta_1\left(Cov[X,Y] + \mathbb{E}[X]\mathbb{E}[Y]\right) + \beta_0^2 + 2\beta_1\mathbb{E}[X] + \beta_1^2\mathbb{E}[X^2] \\
    						&= \mathbb{E}[Y^2] - 2\beta_0\mathbb{E}[Y] - 2\beta_1(Cov[X,Y] + 2\beta_1\mathbb{E}[X]\mathbb{E}[Y] + \beta_0^2 + 2\beta_0\beta_1\mathbb{E}[X] + \beta_1^2Var[X] + \beta_1^2(\mathbb{E}[X])^2
-\end{align}
+\end{aligned}
+\end{equation}
 $$
 
 As before, we find the values of $\beta_0$ and $\beta_1$ which minimize the $MSE(\beta_0, \beta_1)$ by setting the derivatives equal to zero and solving for the betas:
@@ -159,7 +161,7 @@ When we reject the hypothesis that $\beta_1=0$, what we're saying is "It's reall
 In conclusion, this tutorial showed that the optimal regression line of $Y$ on $X$ is defined by the coefficients $\beta_0$ and $\beta_1$ that we derived. These coefficients made no assumptions on the distributions of $X$ and $Y$, nor did we assume that the true relationship between $X$ and $Y$ is linear -- we only used the linear function as an approximation to the true relationship. The next steps would be to formalize the simple linear model by adding an error term, estimate the coefficeints from data and derive their distributions, expecations, and variances, assume that the error terms is normally distibuted, and show this assumption implies the least squares estimate gives the same result as the maximum likelihood estimate. If you want to find more information, or just want a good read on linear regression, I recommend continuing with Shalizi's [lectures](http://www.stat.cmu.edu/~cshalizi/mreg/15/). Thanks for tuning in.
 
 
-References:
+### References:
 
 [^1]: [Lecture 1: Optimal Prediction](http://www.stat.cmu.edu/~cshalizi/mreg/15/lectures/01/lecture-01.pdf)
 
