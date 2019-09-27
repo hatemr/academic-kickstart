@@ -18,7 +18,8 @@ summary = "Practice Questions on Machine Learning"
   * After assuming the linear relationship, mx+b, you define a loss funciton as the mean squared error. Then you initilize the parameters, compute the loss, and iteratively take steps in the direction which reduces the loss the most. 
   * This direction is defined by the gradient. The gradient points uphill in the steapest direction, so to minimize you go the opposite direction, which is downhill.
   * The gradient is a derivative in multidimensional space. For $mx+b$, there are two parameters so the gradient is a 2d vector.
-  * You update the parameters by a step size times the gradient, $w_t = w_{t-1} - \eta \nabla_{w}L$.
+  * You update the parameters by a step size times the gradient $w_t$.
+  * $w_t = w_{t-1} - \eta \nabla_{w}L$.
 
 3. How do you change linear regression if the target variable is binary?
   * Since the target variable is 0 or 1, you squeeze the prediction to the range 0-1. You squeeze by applying using the logistic function $ \frac{1}{1+d^{-1}} $ to the $w^{T}x + b$ term. Finally, you assume this value represents the probability of the target variable being 1. This is called logistic regression.
