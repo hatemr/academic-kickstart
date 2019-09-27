@@ -18,7 +18,7 @@ summary = "Practice Questions on Machine Learning"
   * After assuming the linear relationship, mx+b, you define a loss funciton as the mean squared error. Then you initilize the parameters, compute the loss, and iteratively take steps in the direction which reduces the loss the most. 
   * This direction is defined by the gradient. The gradient points uphill in the steapest direction, so to minimize you go the opposite direction, which is downhill.
   * The gradient is a derivative in multidimensional space. For $mx+b$, there are two parameters so the gradient is a 2d vector.
-  * You update the parameters by a step size times the gradient $w_t$.
+  * You update the parameters by a step size times the gradient $w_t = w_{t-1}$.
   * $w_t = w_{t-1} - \eta \nabla_{w}L$.
 
 3. How do you change linear regression if the target variable is binary?
