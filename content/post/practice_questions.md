@@ -17,14 +17,16 @@ summary = "Practice Questions on Machine Learning"
 2. How do you train a linear regression model?
   * After assuming the linear relationship, mx+b, you define a loss funciton as the mean squared error. Then you initilize the parameters, compute the loss, and iteratively take steps in the direction which reduces the loss the most. 
   * This direction is defined by the gradient. The gradient points uphill in the steapest direction, so to minimize you go the opposite direction, which is downhill.
-  * The gradient is a derivative in multidimensional space. For mx+b, there are two parameters so the gradient is a 2d vector.
-  * You update the parameters by a step size times the gradient: $ w_t = w_{t-1} - \eta \nable_{w}L $.
+  * The gradient is a derivative in multidimensional space. For $mx+b$, there are two parameters so the gradient is a 2d vector.
+  * You update the parameters by a step size times the gradient, $w_t = w_{t-1} - \eta \nable_{w}L$.
 
 3. How do you change linear regression if the target variable is binary?
   * Since the target variable is 0 or 1, you squeeze the prediction to the range 0-1. You squeeze by applying using the logistic function $ \frac{1}{1+d^{-1}} $ to the $w^{T}x + b$ term. Finally, you assume this value represents the probability of the target variable being 1. This is called logistic regression.
 
 4. What else changes in logistic regression? The training? MSE?
-  * Since we are now modeling the probability of $y=1$ as a binomial variable where the probability parameter is a linear combination of the predictor variables. When we maximize joint probability, over all samples, we compute the log-loss the function look different from mse: $$\sum_i y_i \log \sigma(w \cdot x+b)+(1-y_i)\log(1-\sigma(w \cdot x+b))$$
+  * Since we are now modeling the probability of $y=1$ as a binomial variable where the probability parameter is a linear combination of the predictor variables. When we maximize joint probability, over all samples, we compute the log-loss the function look different from mse: 
+
+  $$\sum_i y_i \log \sigma(w \cdot x+b)+(1-y_i)\log(1-\sigma(w \cdot x+b))$$
 
 5. Why don't we use the MSE for the loss for classification, practically speaking?
   * The "logistic" loss is convex and easier to compute. We prefer to minimize _accuracy loss_ (i.e. "0/1" loss), but this loss is non-convex and thus hard to minimize.
