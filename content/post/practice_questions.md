@@ -9,7 +9,7 @@ summary = "Practice Questions on Machine Learning"
 #disable_comments: true
 +++
 
-# Linear Regression
+## Linear Regression
 
 1. What is linear regression?
   * We model a continuous target variable as a linear combination of predictor variables. The "true" relationship need not be linear, we just treat the relationship as linear to be able to predict stuff.
@@ -24,17 +24,17 @@ summary = "Practice Questions on Machine Learning"
   * Since the target variable is 0 or 1, you squeeze the prediction to the range 0-1. You squeeze by applying using the logistic function $ \frac{1}{1+d^{-1}} $ to the $w^{T}x + b$ term. Finally, you assume this value represents the probability of the target variable being 1. This is called logistic regression.
 
 4. What else changes in logistic regression? The training? MSE?
-  * Since we are now modeling the probability of $y=1$ as a binomial variable where the probability parameter is a linear combination of the predictor variables. When we maximize joint probability, over all samples, we compute the log-loss the function look different from mse: $$\sum_i y_i \log \sigma(wx+b)+(1-y_i)(1-\sigma(wx+b))$$.
+  * Since we are now modeling the probability of $y=1$ as a binomial variable where the probability parameter is a linear combination of the predictor variables. When we maximize joint probability, over all samples, we compute the log-loss the function look different from mse: $$\sum_i y_i \log \sigma(w \cdot x+b)+(1-y_i)\log(1-\sigma(w \cdot x+b))$$
 
 5. Why don't we use the MSE for the loss for classification, practically speaking?
   * The "logistic" loss is convex and easier to compute. We prefer to minimize _accuracy loss_ (i.e. "0/1" loss), but this loss is non-convex and thus hard to minimize.
-  * We use a _surrogate_ loss function which approximates the 1/0 loss as closely as possible. The logistic loss is closer to the _accuracy loss_ than the MSE, as shown below:
+  * Since we can't use the _accuracy loss_, which we really want, we must use a _surrogate_ loss function which approximates the 1/0 loss as closely as possible. The logistic loss is closer to the _accuracy loss_ than the MSE, as shown below [^1]:
 
-![mse v logistic loss](/img/mse_v_logistic_loss.png)[^1]
+![mse v logistic loss](/img/mse_v_logistic_loss.png)
 
 Finally, note that logistic regression uses the logistic loss; training a logistic regression with the MSE loss wouldn't be logistic regression anymore. It would be just a classifier.
 
-# Next: PCA and Decision Trees
-## What is PCA?
+## Next up: PCA and Decision Trees
+1. What is PCA?
 
-[^1] [What are the main reasons not to use MSE as a cost functoin for Logistic Regression?](https://www.quora.com/What-are-the-main-reasons-not-to-use-MSE-as-a-cost-function-for-Logistic-Regression)
+[^1]: [What are the main reasons not to use MSE as a cost functoin for Logistic Regression?](https://www.quora.com/What-are-the-main-reasons-not-to-use-MSE-as-a-cost-function-for-Logistic-Regression)
