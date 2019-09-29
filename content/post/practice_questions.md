@@ -38,5 +38,8 @@ Finally, note that logistic regression uses the logistic loss; training a logist
 
 ## Next up: PCA and Decision Trees
 1. What is PCA?
+* PCA takes a data matrix and creates a new set of variables that are linear combinations of the original variables. The new variables, or _principal components_ are constructed in such a way that the first principal component has the largest variance possible, followed by the second principal component, and so on. The principal components are all orthogonal to each other. The principal components can be computed by finding the eigenvectors of the data covariance matrix. PCA is mostly useful for dimensionality reduction; reducing the number of variables to a feasible number, while maintaining as much variation in the data as possible.
+2. What are decision trees?
+* Decision trees split a feature space into non-overlapping regions, then predicts the average of target values in that region. Decision treess split the feature space by iteratively choosing a variable and value to split the predictions on; the variable and value are chosen according to whichever combination reduces an “impurity measure” the most at each step. Impurity is usually measure as entropy; the extent to which the two groups from the split have mostly one class, instead of a mix of two. The algorithm will continue to split the space until a stopping condition is reached, such as there being a small enough number of observations in the resulting leaves, or the depth of the tree reaches a maximum.
 
 [^1]: [What are the main reasons not to use MSE as a cost functoin for Logistic Regression?](https://www.quora.com/What-are-the-main-reasons-not-to-use-MSE-as-a-cost-function-for-Logistic-Regression)
