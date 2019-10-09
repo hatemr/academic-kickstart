@@ -36,7 +36,7 @@ summary = "Practice Questions on Machine Learning"
 
 Finally, note that logistic regression uses the logistic loss; training a logistic regression with the MSE loss wouldn't be logistic regression anymore. It would be just a classifier.
 
-## Next up: PCA and Decision Trees
+## PCA and Decision Trees
 1. What is PCA?
 * PCA takes a data matrix and creates a new set of variables that are linear combinations of the original variables. The new variables, or _principal components_ are constructed in such a way that the first principal component has the largest variance possible, followed by the second principal component, and so on. The principal components are all orthogonal to each other. The principal components can be computed by finding the eigenvectors of the data covariance matrix. PCA is mostly useful for dimensionality reduction; reducing the number of variables to a feasible number, while maintaining as much variation in the data as possible.
 * Finding the new axes is the key part of PCA. Once you find the new axes, you can convert new data into the new axes.
@@ -44,5 +44,19 @@ Finally, note that logistic regression uses the logistic loss; training a logist
 
 2. What are decision trees?
 * Decision trees split a feature space into non-overlapping regions, then predicts the average of target values in that region. Decision treess split the feature space by iteratively choosing a variable and value to split the predictions on; the variable and value are chosen according to whichever combination reduces an “impurity measure” the most at each step. Impurity is usually measure as entropy; the extent to which the two groups from the split have mostly one class, instead of a mix of two. The algorithm will continue to split the space until a stopping condition is reached, such as there being a small enough number of observations in the resulting leaves, or the depth of the tree reaches a maximum.
+
+## SVM, Adaboost, and gradient boosting
+1. What are SVMs?
+  * SVMs are binary classifiers which try to find a hyperplane that splits the two classes in their feature space. Observations lying above the hyperplane are predicted as 1, observations below are predicted as -1. If the data are indeed linearly separable, then the hyperplane is chosen by maximizing the _margin_; the distance of the closest point to the hyperplane. No data points fall within the _margin_.
+
+  The data are often not linearly separable, so the model is modified to allow observations to violate the margin and the hyperplane. The number and severity of violations allowed is controlled with a tuning parameter, which acts as a "budget" for the amount of violations. When the budget is small, the model has low bias and high variance. High budget means high bias but low variance.
+
+  For non-linear class boundaries, we could expand the feature space using functions, like polynomials, of the predictors. In the enlarged feature space, the decision boundary that results is linear. However, with many new features, the computations could be unmanageable. The support vector machine allows us to enlarge the feature space in a way that leads to efficient computations.
+
+  The SVM is an extension of the support vector classifier that results from enlarging the feature space in a specific way, using _kernels_. Kernels are a generalization of the inner product, and they measure the similarity of two observations. Some popular kernels are the polynomial and radial kernels. Kernels are appealing because taking a kernel in the orginal feature space is less expensive than computing an inner product in the expanded feature space.
+2. What is Adaboost?
+  * Adaboost combine multiple 'base' classifiers to form a model whose performance can be significantly better than that of any of the base classifiers. Overall performance can be good even when performance of each base classifier is only slightly better than random guessing. The base classifiers are trained in sequence, using weighted versions of the data with higher weight going to observations that were classified wrong in the previous classifier in the sequence. Once all the classifiers have been trained, their predictions are combined through a weighted majority voting scheme.
+3. What is gradient boosting? 
+
 
 [^1]: [What are the main reasons not to use MSE as a cost functoin for Logistic Regression?](https://www.quora.com/What-are-the-main-reasons-not-to-use-MSE-as-a-cost-function-for-Logistic-Regression)
