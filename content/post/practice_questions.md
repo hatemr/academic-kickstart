@@ -1,4 +1,5 @@
 +++
++++
 title = "ML Practice Questions"
 date = 2019-09-27  #T13:23:10+01:00
 draft = false
@@ -15,7 +16,7 @@ summary = "Practice Questions on Machine Learning"
   * We model a continuous target variable as a linear combination of predictor variables. The "true" relationship need not be linear, we just treat the relationship as linear to be able to predict stuff.
 
 2. How do you train a linear regression model?
-  * After assuming the linear relationship, mx+b, you define a loss funciton as the mean squared error. Then you initilize the parameters, compute the loss, and iteratively take steps in the direction which reduces the loss the most. 
+  * After assuming the linear relationship, mx+b, you define a loss funciton as the mean squared error. Then you initilize the parameters, compute the loss, and iteratively take steps in the weight space in the direction which reduces the loss the most. 
   * This direction is defined by the gradient. The gradient points uphill in the steapest direction, so to minimize you go the opposite direction, which is downhill.
   * The gradient is a derivative in multidimensional space. For $mx+b$, there are two parameters so the gradient is a 2d vector.
   * You update the parameters by a step size times the gradient $w^{t} = w^{t-1} - \eta \nabla_{w}L$.
@@ -57,7 +58,6 @@ Finally, note that logistic regression uses the logistic loss; training a logist
 
 2. What is Adaboost?
   * Adaboost combine multiple 'base' classifiers to form a model whose performance can be significantly better than that of any of the base classifiers. Overall performance can be good even when performance of each base classifier is only slightly better than random guessing. The base classifiers are trained in sequence, using weighted versions of the data with higher weight going to observations that were classified wrong in the previous classifier in the sequence. Once all the classifiers have been trained, their predictions are combined through a weighted majority voting scheme.
-3. What is gradient boosting? 
 
 
 [^1]: [What are the main reasons not to use MSE as a cost functoin for Logistic Regression?](https://www.quora.com/What-are-the-main-reasons-not-to-use-MSE-as-a-cost-function-for-Logistic-Regression)

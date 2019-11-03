@@ -18,7 +18,7 @@ role: Data Scientist
 #  url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: Data scientist interested in machine learning and Natural Language Processing.
+bio: Data scientist interested in machine learning and natural language processing.
 
 interests:
 - Machine Learning
