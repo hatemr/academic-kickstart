@@ -24,11 +24,11 @@ Turn every word into a linear combination of each words' _value vector_ ($V$). T
   * Dot product of the word's _query vector_ with the other word's _key vector_.
   * $Q K^T$
 3. Normalize by the dimension of the _key vector_:
-  * $\frac{Q K^T}{\sqrt{dim(K)}}$
+  * $\frac{Q K^T}{\sqrt{d_K}}$
 4. Apply __softmax__ to rows so each words' scores are positive and sum to 1.
-  * $softmax\(\frac{Q K^T}{\sqrt{dim(K)}}\)$
+  * $softmax\(\frac{Q K^T}{\sqrt{d_K}}\)$
 5. For each word, take a linear combination of the words (rows in the value matrix V). Words that have higher weights from the softmax will receive more weight:
-  * $Z = softmax\(\frac{Q K^T}{\sqrt{dim(K)}}\) V$
+  * $Z = softmax\(\frac{Q K^T}{\sqrt{d_K}}\) V$
   * Each row of the new matrix is a weighted sum of the rows of V. This is because left-multiplicaiton of matrices is a linear combination or rows.
   * The left matrix forces the V matrix to focus on certain words and not others.
 
