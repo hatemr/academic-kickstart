@@ -1,5 +1,4 @@
 +++
-+++
 title = "Transformers Introduction"
 date = 2019-11-03  #T13:23:10+01:00
 draft = false
