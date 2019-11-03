@@ -43,14 +43,19 @@ Now let's use mutiple sets of Query/Key/Value matrices, one for each _head_.
 That gives us eight different $Z$ matrics:
 
 * $Z_0,...,Z_7$  
+
 Now, concatenate all the matrices, and multiply by an additional weights matrix $W^0 \(8d_k \times d_W \)$.  
 * $Z_c=[Z_0,...,Z_8] \\ \(N \times 8d_k)\)$  
 * $Z = Z_cW^0$  
+
 This output We can summarize the calculation as follows.  
+
 $$
 Z = Z_c W^0 = [Z_1,...,Z_7]
 $$
+
 where
+
 $Z_i = softmax(\frac{Q_i K_i^T}{\sqrt{d_k}}) V_i$
 
 The weight matrices $\(W_i^Q, W_i^K, W_i^V\)$ are initialized randomly and learned during training. They project input embeddings into different representation subspaces.
