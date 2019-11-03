@@ -40,10 +40,11 @@ Now let's use mutiple sets of Query/Key/Value matrices, one for each _head_.
 * Before: $(W^Q, W^K, W^V)$
 * After: $\{(W_0^Q, W_0^K, W_0^V),..,(W_7^Q, W_7^K, W_7^V)\}$
 
-That gives us eight different Z matrics:  
-* $Z_0,...,Z_7$
+That gives us eight different $Z$ matrics:
+
+* $Z_0,...,Z_7$  
 Now, concatenate all the matrices, and multiply by an additional weights matrix $W^0 \(8d_k \times d_W \)$.  
-* $Z_c=[Z_0,...,Z_8] \(N \time (8 \cdot d_k)\)$  
+* $Z_c=[Z_0,...,Z_8] \\ \(N \times 8d_k)\)$  
 * $Z = Z_cW^0$  
 This output We can summarize the calculation as follows.  
 $$
