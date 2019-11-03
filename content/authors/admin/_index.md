@@ -51,8 +51,13 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/hatemr
+
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/robert-e-hatem/
+
 # Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
 #   icon_pack: ai
 #   link: files/cv.pdf
@@ -69,10 +74,10 @@ user_groups:
 
 I am a master's student in Fin. Mathematics at the University of Chicago. I am interested in machine learning and natural language processing.
 
-See my other site https://hatemr.github.io while I migrate websites.
+See my other site [hatemr.github.io](https://hatemr.github.io) while I migrate websites.
 
-Github: https://github.com/hatemr
+Github: [here](https://github.com/hatemr)
 
-LinkedIn: https://www.linkedin.com/in/robert-e-hatem/
+LinkedIn: [here](https://www.linkedin.com/in/robert-e-hatem/)
 
 Email: rhatem@uchicago.edu
