@@ -42,9 +42,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:rhatem@uchicago.edu"  #'#contact'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/RobertEHatem #https://twitter.com/GeorgeCushen
+#- icon: twitter
+#  icon_pack: fab
+#  link: https://twitter.com/RobertEHatem
 #- icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
@@ -75,9 +75,3 @@ user_groups:
 I am a master's student in Fin. Mathematics at the University of Chicago. I am interested in machine learning and natural language processing.
 
 See my other site [hatemr.github.io](https://hatemr.github.io) while I migrate websites.
-
-Github: [here](https://github.com/hatemr)
-
-LinkedIn: [here](https://www.linkedin.com/in/robert-e-hatem/)
-
-Email: rhatem@uchicago.edu
