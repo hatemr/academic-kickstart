@@ -58,5 +58,10 @@ Finally, note that logistic regression uses the logistic loss; training a logist
 2. What is Adaboost?
   * Adaboost combine multiple 'base' classifiers to form a model whose performance can be significantly better than that of any of the base classifiers. Overall performance can be good even when performance of each base classifier is only slightly better than random guessing. The base classifiers are trained in sequence, using weighted versions of the data with higher weight going to observations that were classified wrong in the previous classifier in the sequence. Once all the classifiers have been trained, their predictions are combined through a weighted majority voting scheme.
 
+## Transformers
+1. What is attention?
+  * In sequential models like recurrent neural networks, the final hidden state may have forgotten information from earlier in the sequence. Therefore, the model takes a weighted sum of the previous hidden states. This gives a vector called the _context vector_.
+2. What are transformers?
+  * Transformers are distinct from RNNs or CNNs. They rely on attention mechanims, hence the founding paper's title _Attention Is All You Need_. Transformers compute attention differently from recurrent neural networks. Transformers represent each word as a linear combination of other word vectors in a value matrix $V$, where the weights are computed based on similarity to the other words. 
 
 [^1]: [What are the main reasons not to use MSE as a cost functoin for Logistic Regression?](https://www.quora.com/What-are-the-main-reasons-not-to-use-MSE-as-a-cost-function-for-Logistic-Regression)
